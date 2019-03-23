@@ -1,0 +1,29 @@
+- Programación hecha en casa, traer notebook
+- Profesor da requerimientos y hay que traer las apps hechas. No importa cómo, si no que funcionen
+- Los profesores revisan las aplicaciones y las corrigen en el parcial. Seguimiento semana a semana.
+- Tener todo listo la clase previa al parcial.
+- Se hace hincapié en que las apps sean cómodas e intuitivas para el usuario. (UX)
+
+IONIC (framework para apps móviles)
+
+Clases 9:00 AM, no se pasa lista. Las clases son de consulta solamente.
+La primera parte es individual pero colaborativa.
+
+INSTALAR Android Studio / IONIC 4 (La versión que funcione en nuestro celular) / Firebase
+Las apps las traemos hechas en nuestro celular
+
+Para 30/3 traer 5 apps corriendo en el celu
+
+
+Para la clase que viene, en celular:
+5 apps generadas con Ionic, cascarones vacíos pero con funcionalidad. La primer página del cascarón tiene que ser un login:
+MAIL PASS ACEPTAR CANCELAR, puede no conectarse a nada, sólo interfaz gráfica.
+
+Que tengan login con distintos botones etc (distintos estéticamente)
+
+Al descargar los ejecutables en el dispositivo, cambiarles los IDs porque sino se pisan.
+
+Bajar app desde Ionic, tutorial
+
+ionic start
+ionic serve
