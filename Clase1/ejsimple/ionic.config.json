@@ -1,0 +1,7 @@
+{
+  "name": "ejsimple",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
