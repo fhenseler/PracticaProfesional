@@ -1,0 +1,22 @@
+.round {
+    --width: 60px;
+    --height: 60px;
+    --border-radius: 50%;
+    --vertical-align: middle;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --color: green;
+}
+
+.toolbar-background {
+    background-color: rgb(250, 255, 210);
+}
+
+.card {
+    background-color: rgb(174, 222, 245);
+    width: 30%;
+}
+
+.item {
+    background-color: rgb(221, 168, 214);
+}
