@@ -17,7 +17,7 @@ ion-row {
 
 ion-col {
     border: 1px solid #488aff;
-    background: $white-color;
+    background: #9b9999;
 }
 
 ion-button {
@@ -26,7 +26,7 @@ ion-button {
 
 @media (min-width: 240px) and (max-width: 768px) {
     ion-grid {
-        background: $white-color;
+        background: #444444;
     }
     ion-col {
         border: none;

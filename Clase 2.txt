@@ -1,0 +1,12 @@
+Sumar registro al login. Mail password, pegarle a firebase y hacer la autenticacion.
+
+Diseno de iconos de las aplicaciones. Se puede hacer editando una imagen y colocandolo en el lugar preciso en Ionic.
+photopea.com - editor de imagenes que genera iconos
+
+splash screen (pantalla de carga al inicio), modificar. Los 5 splashes distintos.
+
+
+FECHA DE PRE ENTREGA: 27/4 TRAEMOS TODAS LAS APPS Y EL PROFE NOS DICE LA NOTA.
+TENER TODO HECHO. LA FECHA DE PARCIAL ES EL 4/5 Y ESE DIA SE PASA LA NOTA.
+
+RECUPERATORIO 11/5.
