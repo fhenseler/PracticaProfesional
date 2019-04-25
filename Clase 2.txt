@@ -10,3 +10,8 @@ FECHA DE PRE ENTREGA: 27/4 TRAEMOS TODAS LAS APPS Y EL PROFE NOS DICE LA NOTA.
 TENER TODO HECHO. LA FECHA DE PARCIAL ES EL 4/5 Y ESE DIA SE PASA LA NOTA.
 
 RECUPERATORIO 11/5.
+
+doskey android=C:\Users\{username}\AppData\Local\Android\sdk\tools\android.bat $*
+
+set ANDROID_HOME=C:\Users\Fede\AppData\Local\Android\Sdk
+set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools

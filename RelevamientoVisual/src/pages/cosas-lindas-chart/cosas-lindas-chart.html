@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color={{config.ionColor}}>
+    <ion-title>{{sala}}</ion-title>
+    <p class="subtitle" style="color: white;">{{usuario.mail}}</p>
+  </ion-navbar>
+
+</ion-header>
+
+<div class="imagen" [ngClass]="{'ocultar':ocultarImagen,'opacidad':true}">
+
+  <ion-icon name="close" (click)="OcultarImagen()"></ion-icon>
+  <img [src]="image" alt="">
+
+</div>
+
+<ion-content padding>
+
+    <div style="display: block; display:flex;align-items: center;justify-content: center;height: 100%;width: 100%;" id="divCanvas">
+        <canvas baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+
+</ion-content>

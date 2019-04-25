@@ -1,6 +1,0 @@
-
-cordova v. 6.5.0
-ionic v. 3.6.0
-ionic CLI v. 2.2.2
-node v. 7.10.0
-npm v. 4.0.3
