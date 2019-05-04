@@ -1,0 +1,30 @@
+@font-face {
+    src: url("../../assets/fonts/Roboto-Thin.ttf");
+    font-family: "roboto thin";
+}
+
+.normalToast { 
+    .toast-message { 
+        background: color($colors, danger);
+        font-size: 25px;
+    }
+}
+
+page-home {
+
+    button[ion-button] {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        font-size: 70px;
+        color: black;
+        font-family: "roboto thin";
+    }
+    #but1{
+        background-color: rgb(214, 182, 0);
+    }
+    #but2{
+        background-color: purple;
+    }
+}
+

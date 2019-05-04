@@ -1,0 +1,105 @@
+<ion-header>
+
+  <ion-navbar color="red">
+    <ion-title>
+      <ion-icon name="home"></ion-icon>
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="Logout()">
+        <!-- <ion-icon name="power"></ion-icon> -->SALIR
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<div class="alert" [ngClass]="{'ocultar':ocultarAlert}">
+
+  <div class="alert-message animation-target">
+    <h1>{{tituloAlert}}</h1>
+    <p>{{mensajeAlert}}</p>
+    <div class="botones">
+      <button ion-button outline (click)="OcultarAlert()" [ngClass]="{'ocultar':ocultarBotonCancelar}">Cancelar</button>
+      <button ion-button outline (click)="handlerAlert()">Aceptar</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- <div class="background"></div> -->
+
+<ion-content padding style="background-color: rgb(1, 207, 207)">
+
+  <div class="container" *ngIf="rotar">
+
+    <div class="botones">
+      <button ion-button (click)="CambiarIdioma()" class="header"><img [src]="bandera" style="width:100px;height:100px;" /></button>
+      <button ion-button (click)="AlternarTipo()" class="header"><img [src]="imgTipo" style="width:100px;height:100px;" /></button>
+    </div>
+
+    <div class="botones">
+      <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[0].sonido)">
+        <img src="../../assets/imgs/{{botones[0].mostrar}}" style="width:100px;height:100px;" />
+      </button>
+
+      <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[1].sonido)">
+        <img src="../../assets/imgs/{{botones[1].mostrar}}" style="width:100px;height:100px;" />
+      </button>
+    </div>
+
+    <div class="botones">
+      <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[2].sonido)">
+        <img src="../../assets/imgs/{{botones[2].mostrar}}" style="width:100px;height:100px;" />
+      </button>
+
+      <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[3].sonido)">
+        <img src="../../assets/imgs/{{botones[3].mostrar}}" style="width:100px;height:100px;" />
+      </button>
+    </div>
+
+    <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[4].sonido)">
+      <img src="../../assets/imgs/{{botones[4].mostrar}}" style="width:100px;height:100px;" />
+    </button>
+
+  </div>
+
+  <div class="vertical-container" *ngIf="!rotar">
+
+    <div class="botones">
+      <button ion-button class="header" (click)="CambiarIdioma()">
+        <img [src]="bandera" style="width:100%;height:100%;" />
+      </button>
+
+      <button ion-button class="header" (click)="AlternarTipo()">
+        <img [src]="imgTipo" style="width:100%;height:100%;" />
+      </button>
+    </div>
+
+    <div class="botones">
+      <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[0].sonido)">
+        <img src="../../assets/imgs/{{botones[0].mostrar}}" style="width:100px;height:100px;" />
+      </button>
+
+      <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[1].sonido)">
+        <img src="../../assets/imgs/{{botones[1].mostrar}}" style="width:100px;height:100px;" />
+      </button>
+    </div>
+
+    <div class="botones">
+      <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[2].sonido)">
+        <img src="../../assets/imgs/{{botones[2].mostrar}}" style="width:100px;height:100px;" />
+      </button>
+
+      <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[3].sonido)">
+        <img src="../../assets/imgs/{{botones[3].mostrar}}" style="width:100px;height:100px;" />
+      </button>
+    </div>
+
+    <button ion-button class="content" (click)="EjecutarSonido(idioma, botones[4].sonido)">
+      <img src="../../assets/imgs/{{botones[4].mostrar}}" style="width:200px;height:200px;" />
+    </button>
+
+  </div>
+
+</ion-content>

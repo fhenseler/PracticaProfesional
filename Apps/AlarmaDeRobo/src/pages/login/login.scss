@@ -1,0 +1,139 @@
+@font-face {
+    src: url("../../assets/fonts/Cabin_Sketch/CabinSketch-Regular.ttf");
+    font-family: "Cabin Sketch";
+}
+
+@font-face {
+    src: url("../../assets/fonts/Pacifico/Pacifico-Regular.ttf");
+    font-family: "Pacifico";
+}
+
+@keyframes tada {
+from {
+    opacity: 1;
+}
+50% {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+  }
+
+
+page-login {
+
+    body { width: 100%; }
+
+      
+  .ani { 
+      animation-name: tada; 
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    img.background {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    
+    }
+
+    div.vertical-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        background-size: cover;
+    }
+
+    div.horizontal-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    div.header {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    input {
+        width: 75%;
+        border: #009CD9 solid 2px;
+
+        padding: 5px;
+        margin: 25px auto 25px auto;
+        font-size: 25px;
+        transition-duration: .3s;
+        transition-property: border-bottom-color font-size;
+        background-color: rgb(255, 255, 255);
+        caret-color: #009CD9;
+    }
+
+    input:focus {
+        box-shadow: 0 0 7px 2px #009CD9;
+    }
+
+    button[ion-button] {
+        padding: 30px;
+        width: 15ch;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        font-size: 20px;
+        text-transform: none;
+    }
+
+    img {
+        width: 130px;
+        height: auto;
+    }
+
+    h1 {
+        position: relative;
+        display: inline;
+        margin-left: 25px;
+        font-family: "Cabin Sketch";
+        font-size: 80px;
+        font-weight: 100;
+        color: #009CD9;
+        overflow: visible;
+    }
+
+    div.botones {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        
+        button[ion-button] {
+            margin-top: 20px;
+            font-size: 70px;
+            padding: 30px;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            box-sizing: border-box;
+
+            img { height: 50%; }
+        }
+    
+        * {
+            font-size: 40px; 
+        }
+    }
+}

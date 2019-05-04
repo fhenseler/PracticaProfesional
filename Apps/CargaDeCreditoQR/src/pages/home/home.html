@@ -1,0 +1,46 @@
+<ion-header style="position: absolute;z-index: 3;">
+  <ion-navbar color="grey">
+    <span>{{usuario.mail}}</span>
+    <ion-icon name="power" (click)="MostrarAlert('', '¿Cerrar sesión?', Logout)"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<div class="alert" [ngClass]="{'ocultar':ocultarAlert}">
+
+  <div class="alert-message animation-target">
+    <h1>{{tituloAlert}}</h1>
+    <p>{{mensajeAlert}}</p>
+    <div class="botones">
+      <button ion-button outline (click)="OcultarAlert()" [ngClass]="{'ocultar':ocultarBotonCancelar}">Cancelar</button>
+      <button ion-button outline (click)="handlerAlert()">Aceptar</button>
+    </div>
+  </div>
+
+</div>
+
+<ion-content class="">
+
+  <div [class]="estado">
+
+    <!-- <img src="../../assets/imgs/qr_red.png" alt=""> -->
+    <!-- <h2>Ingresar QR</h2> -->
+    <button (click)="InicializarLectorQR()">Escanear Código QR</button>
+
+    <h2 style="color: white;">Tu saldo es:</h2>
+    <h1 [ngClass]="{'ocultar':!ocultarSpinner}" style="color: white;">${{saldo}}</h1>
+
+    <button (click) = "eliminarSaldo()">Borrar saldo</button>
+    <div class="spinner" [ngClass]="{'ocultar':ocultarSpinner}">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+
+  </div>
+
+  <button ion-button class="close" (click)="OcultarLectorQR()">
+    <ion-icon name="close"></ion-icon>
+  </button>
+</ion-content>

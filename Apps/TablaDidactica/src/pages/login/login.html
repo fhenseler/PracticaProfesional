@@ -1,0 +1,28 @@
+<img class="background" src="../../assets/imgs/background.jpg"/>
+<div class="vertical-container" >
+  
+  <div class="horizontal-container">
+    <!-- <div class="header">
+      <img src="../../assets/imgs/logo.png" class="tada" [class]="animation">
+      <h1>
+        Inicio
+      </h1>
+    </div> -->
+
+
+    <div class="botones">
+      <button ion-button color="red" (click)="SetearUsuario('anonimo@gmail.com', '444444')">ANÓNIMO</button>
+      <button ion-button color="red" (click)="SetearUsuario('tester@gmail.com', '555555')">TESTER</button>
+      <button ion-button color="red" (click)="SetearUsuario('usuario@gmail.com', '333333')">USUARIO</button>
+      <button ion-button color="red" (click)="SetearUsuario('invitado@gmail.com', '222222')">INVITADO</button>
+      <button ion-button color="red" (click)="SetearUsuario('admin@gmail.com', '111111')">ADMIN</button>
+    </div>
+
+
+    <input type="text" placeholder="tuEmail@gmail.com"  [(ngModel)]="email" />
+    <input type="password" placeholder="******" [(ngModel)]="password" />
+    <button ion-button color="blue" (click)="Login()" [disabled]="estadoBoton">
+      INGRESAR
+    </button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<!-- <img class="background" src="../../assets/imgs/background.jpg" /> -->
+
+<div class="vertical-container" style="background-color:rgb(118, 118, 255);">
+
+  <div class="horizontal-container" style="background-color:rgb(118, 118, 255);">
+
+    <!-- <div class="header">
+      <img src="../../assets/imgs/logo.png" [class]="animation">
+      <h1>Inicio</h1>
+    </div> -->
+
+    <input type="text" placeholder="Correo electrónico" [(ngModel)]="email" />
+    <input type="password" placeholder="Contraseña" [(ngModel)]="password" />
+    <button ion-button color="celeste" (click)="Login()" [disabled]="estadoBoton">
+      Ingresar
+    </button>
+
+    <div class="botones">
+      <button ion-button color="celeste" (click)="SetearUsuario('usuario@gmail.com', '333333')"><img src="../../assets/imgs/user.svg" /></button>
+      <button ion-button color="celeste" (click)="SetearUsuario('admin@gmail.com', '111111')"><img src="../../assets/imgs/user-tie.svg" /></button>
+      <button ion-button color="celeste" (click)="SetearUsuario('invitado@gmail.com', '222222')"><img src="../../assets/imgs/user-tag.svg" /></button>
+      <button ion-button color="celeste" (click)="SetearUsuario('anonimo@gmail.com', '444444')"><img src="../../assets/imgs/user-secret.svg" /></button>
+      <button ion-button color="celeste" (click)="SetearUsuario('tester@gmail.com', '555555')"><img src="../../assets/imgs/bug.svg" /></button>
+    </div>
+
+  </div>
+
+</div>

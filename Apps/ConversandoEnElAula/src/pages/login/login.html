@@ -1,0 +1,33 @@
+<!-- <img class="background" [src]="background"/> -->
+<div class="vertical-container" style="background-color:darkblue">
+  
+   <div class="horizontal-container" style="background-color:darkblue"> 
+    <!-- <div class="header">
+      <img src="../../assets/imgs/logo.png" [class]="animation">
+      <h1>Inicio</h1>
+    </div> -->
+<!--     
+    <div class="botones">
+      <button ion-button color="blue" (click)="SetearUsuario('usuario@gmail.com', '333333')"><img src="../../assets/imgs/user.svg" /></button>
+      <button ion-button color="blue" (click)="SetearUsuario('admin@gmail.com', '111111')"><img src="../../assets/imgs/user-tie.svg" /></button>
+      <button ion-button color="blue" (click)="SetearUsuario('invitado@gmail.com', '222222')"><img src="../../assets/imgs/user-tag.svg" /></button>
+      <button ion-button color="blue" (click)="SetearUsuario('anonimo@gmail.com', '444444')"><img src="../../assets/imgs/user-secret.svg" /></button>
+      <button ion-button color="blue" (click)="SetearUsuario('tester@gmail.com', '555555')"><img src="../../assets/imgs/bug.svg" /></button>
+    </div> -->
+
+    <div class="botones">
+      <button ion-button color="blue" (click)="SetearUsuario('usuario@gmail.com', '333333')">USUARIO</button>
+      <button ion-button color="blue" (click)="SetearUsuario('admin@gmail.com', '111111')">ADMIN</button>
+      <button ion-button color="blue" (click)="SetearUsuario('invitado@gmail.com', '222222')">INVITADO</button>
+      <button ion-button color="blue" (click)="SetearUsuario('anonimo@gmail.com', '444444')">ANONIMO</button>
+      <button ion-button color="blue" (click)="SetearUsuario('tester@gmail.com', '555555')">TESTER</button>
+    </div>
+
+
+    <input type="text" placeholder="Correo electrónico" [(ngModel)]="email" />
+    <input type="password" placeholder="Contraseña" [(ngModel)]="password" />
+
+    <button ion-button color="blue" (click)="Login()" [disabled]="estadoBoton">Ingresar</button>
+
+  </div>
+</div>

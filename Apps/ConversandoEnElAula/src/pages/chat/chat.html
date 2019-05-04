@@ -1,0 +1,62 @@
+<ion-header>
+
+  <ion-navbar color={{ionColor}}>
+    <ion-title>{{sala}}</ion-title>
+    <p class="subtitle" style="color: white;">{{usuario.mail}}</p>
+    <ion-buttons end>
+      <button ion-button (click)="MostrarAlert('', '¿Cerrar Sesión?', Logout)">
+        <ion-icon name="power"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<div class="alert" [ngClass]="{'ocultar':ocultarAlert}">
+
+  <div class="alert-message animation-target" [ngClass]="{'background-purple':config.sala == 'PPS-4A'}">
+    <h1>{{tituloAlert}}</h1>
+    <p>{{mensajeAlert}}</p>
+    <div class="botones">
+      <button ion-button outline (click)="OcultarAlert()" [ngClass]="{'ocultar':ocultarBotonCancelar,'buttons-purple':config.sala == 'PPS-4A'}">No</button>
+      <button ion-button outline (click)="handlerAlert()" [ngClass]="{'buttons-purple':config.sala == 'PPS-4A'}">Sí</button>
+    </div>
+  </div>
+
+</div>
+
+<ion-content #content style="background-color: lightgrey">
+
+  <div class="spinner" [ngClass]="{'ocultar':ocultarSpinner}">
+    <img src="../../assets/imgs/spinner.gif" alt="">
+  </div>
+
+  <ion-card [ngClass]="{'ocultar':!ocultarSpinner}">
+    <ion-card-content>Este es el comienzo de la charla en la sala {{sala}}.</ion-card-content>
+  </ion-card>
+
+  <ng-container *ngFor="let item of mensajes">
+    <ion-card [ngClass]="{'usuario-actual': item.usuario == usuario.mail,'usuario-actual-PPS-4A': config.sala == 'PPS-4A' && item.usuario == usuario.mail,'usuario-actual-PPS-4B': config.sala == 'PPS-4B' && item.usuario == usuario.mail}">
+      <ion-card-header [ngClass]="{'ocultar usuario-actual-padding':item.usuario == usuario.mail}">{{item.usuario}}</ion-card-header>
+
+      <ion-card-content>{{item.texto}}</ion-card-content>
+      <ion-row class="cardfooter">
+        <ion-col>
+          <p>{{item.hora}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ng-container>
+
+</ion-content>
+
+<div class="footer">
+
+  <input type="text" placeholder="Escribe algo..." [(ngModel)]="texto" (input)="VerificarCantidadDeCaracteres()"
+    [ngClass]="{'input-no-valido':inputNoValido}" />
+
+  <button ion-button color={{ionColor}} (click)="EnviarMensaje()" class="enviar">
+    <ion-icon name="paper-plane"></ion-icon>
+  </button>
+
+</div>

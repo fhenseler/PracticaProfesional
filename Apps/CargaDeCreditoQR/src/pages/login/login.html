@@ -1,0 +1,24 @@
+<ion-content>
+
+  <div class="vertical-container" style="background-color: lightcoral">
+    <div class="horizontal-container" style="background-color: lightcoral">
+      <!-- <div class="header">
+        <img src="../../assets/imgs/qr_red.png" [class]="animation" />
+        <h1>Inicio</h1>
+      </div> -->
+
+      <input type="text" placeholder="Correo electrónico" [(ngModel)]="email" />
+      <input type="password" placeholder="Contraseña" [(ngModel)]="password" />
+      <button ion-button color="red" (click)="Login()" [disabled]="estadoBoton">{{textoDelBoton}}</button>
+
+      <div class="botones">
+        <button ion-button color="red" (click)="SetearUsuario('usuario@gmail.com', '333333')">USUARIO</button>
+        <button ion-button color="red" (click)="SetearUsuario('admin@gmail.com', '111111')">ADMIN</button>
+        <button ion-button color="red" (click)="SetearUsuario('invitado@gmail.com', '222222')">INVITADO</button>
+        <button ion-button color="red" (click)="SetearUsuario('anonimo@gmail.com', '444444')">ANONIMO</button>
+        <button ion-button color="red" (click)="SetearUsuario('tester@gmail.com', '555555')">TESTER</button>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
